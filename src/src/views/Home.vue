@@ -23,7 +23,7 @@ export default {
   &:after {
     content: "";
     background: url("~@/assets/christmas-bulb.jpg");
-    opacity: 0.5;
+    opacity: 0.7;
     top: 0;
     left: 0;
     bottom: 0;
@@ -37,13 +37,14 @@ export default {
   }
   min-height: 500px;
   position: relative;
+  border-right: 2px solid white;
 }
 
 .manage-column {
   &:after {
     content: "";
     background: url("~@/assets/christmas-tree.jpg");
-    opacity: 0.5;
+    opacity: 0.7;
     top: 0;
     left: 0;
     bottom: 0;
@@ -57,5 +58,6 @@ export default {
   }
   min-height: 500px;
   position: relative;
+  border-left: 2px solid white;
 }
 </style>
