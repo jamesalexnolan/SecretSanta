@@ -1,11 +1,29 @@
 // Define variable defaults
+$red: #4e0c03;
+$green:   #053630;
+$teal: #99DDC8;
+
 $body-bg: #f6f7eb;
 $body-color: #111;
-$teal: #99DDC8;
-$green:   #053630;
 $primary: $green;
-$red: #64150A;
+$secondary: $red;
 $headings-color:  #FFFFFF;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1112px,
+  xl: 1400px
+);
+
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1182px,
+  xl: 1340px
+) !default;
 
 
 // Then import Bootstrap an BootstrapVue SCSS files (order is important)
