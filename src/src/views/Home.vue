@@ -56,17 +56,17 @@
     </div>
 
     <div class="container-fluid bg-primary">
-    <div class="container">
-      <div class="insruction-section row py-4">
-        <b-card-group>
-          <b-card
-            v-bind:key="index"
-            v-for="(item, index) in items"
-            class="col-3"
-            style="background: none; border: none"
-          >
-            <div
-              style="
+      <div class="container">
+        <div class="insruction-section row py-4">
+          <b-card-group>
+            <b-card
+              v-bind:key="index"
+              v-for="(item, index) in items"
+              class="col-3"
+              style="background: none; border: none"
+            >
+              <div
+                style="
                 background-color: #cfd7d8;
                 box-sizing: content-box;
                 display: inline-block;
@@ -74,18 +74,18 @@
                 padding: 40px;
                 border: 7px solid #FFF;
               "
-            >
-              <b-icon
-                variant="success"
-                v-bind:icon="item.icon"
-                style="width: 50px; height: 50px"
-              ></b-icon>
-            </div>
-            <h3 class="mt-3" style="padding: 0 30px; font-size: 20px">
-              <b>{{ item.title }}</b>
-            </h3>
-          </b-card>
-        </b-card-group>
+              >
+                <b-icon
+                  variant="success"
+                  v-bind:icon="item.icon"
+                  style="width: 50px; height: 50px"
+                ></b-icon>
+              </div>
+              <h3 class="mt-3" style="padding: 0 30px; font-size: 20px">
+                <b>{{ item.title }}</b>
+              </h3>
+            </b-card>
+          </b-card-group>
         </div>
       </div>
     </div>
@@ -96,31 +96,23 @@
 export default {
   name: "Home",
   components: {},
-  data: function () {
+  data: function() {
     return {
       items: [
         {
           title: "STEP ONE: Create a Secret Santa event",
-          paragraph:
-            "name your event and set a date for it, while creating a login for yourself at the same time",
           icon: "gift",
         },
         {
           title: "STEP TWO: Invite the participents",
-          paragraph:
-            "once you have created your event, you’ll be brought to the manage page, here you can start to invite people",
           icon: "chat-dots",
         },
         {
           title: "STEP THREE: Send an invite",
-          paragraph:
-            "once you have invited people to your event, you can then send an email round notifying them of the date and who their Secret Santa is",
           icon: "envelope",
         },
         {
           title: "STEP FOUR: Manage your event",
-          paragraph:
-            "Login any time, to edit the event, add new members as well as generate a link to manually send to anyone",
           icon: "card-list",
         },
       ],
@@ -133,10 +125,10 @@ export default {
 .manage-column {
   &:after {
     content: "";
-    background: url("~@/assets/christmas-tree.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+    background: url("~@/assets/christmas-bulb.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     top: 0;
     left: 0;
     bottom: 0;
@@ -152,25 +144,5 @@ export default {
   .content {
     z-index: 1;
   }
-}
-
-.insruction-section {
-  &:after {
-    content: "";
-    background-color: #053630;
-    opacity: 0.9;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-  position: relative;
 }
 </style>
