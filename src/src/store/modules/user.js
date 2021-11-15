@@ -3,14 +3,13 @@ export default {
   state: {
     loggedIn: false,
   },
+  getters: {
 
-  getters: {},
-
+  },
   actions: {},
-
   mutations: {
     setLoggedIn(state, loggedIn) {
       state.loggedIn = loggedIn;
     },
   },
-};
+}

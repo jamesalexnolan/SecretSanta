@@ -16,14 +16,15 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'Header',
   props: {
   },
    computed: {
-    loggedIn() {
-      return this.$store.user.loggedIn
-    }
+     ...mapState({
+       loggedIn: state => state.user.loggedIn
+     })
    }
 }
 </script>

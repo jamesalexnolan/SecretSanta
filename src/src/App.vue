@@ -11,7 +11,6 @@ import Header from "./components/Header.vue"
 import ModalLogin from "./components/ModalLogin.vue"
 export default {
   name: 'App', 
-  store,
   components: {
     Header,
     ModalLogin
