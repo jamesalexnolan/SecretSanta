@@ -125,7 +125,7 @@ export default {
 .manage-column {
   &:after {
     content: "";
-    background: url("~@/assets/christmas-bulb.jpg");
+    background: url("~@/assets/christmas-tree.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
