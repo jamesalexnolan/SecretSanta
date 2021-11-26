@@ -5,6 +5,7 @@
         <div class="col-6 d-flex align-items-center justify-content-end">
           <div class="content">
             <button
+              v-on:click="createSecretSanta"
               class="btn btn-lg active shadow-sm p-3 mb-5"
               style="
                 width: 300px;
@@ -15,7 +16,7 @@
                 display: inline-block;
                 padding: 60px;
                 margin-right: 40px;
-                border: 7px solid #FFF;
+                border: 7px solid #fff;
               "
             >
               <b-icon
@@ -30,6 +31,7 @@
         <div class="col-6 d-flex align-items-center justify-content-start">
           <div class="content">
             <button
+              v-on:click="this.manageSecretSanta()"
               class="btn active shadow-sm p-3 mb-5"
               style="
                 width: 300px;
@@ -40,7 +42,7 @@
                 display: inline-block;
                 padding: 60px;
                 margin-left: 40px;
-                border: 7px solid #FFF;
+                border: 7px solid #fff;
               "
             >
               <b-icon
@@ -67,13 +69,13 @@
             >
               <div
                 style="
-                background-color: #cfd7d8;
-                box-sizing: content-box;
-                display: inline-block;
-                border-radius: 50%;
-                padding: 40px;
-                border: 7px solid #FFF;
-              "
+                  background-color: #cfd7d8;
+                  box-sizing: content-box;
+                  display: inline-block;
+                  border-radius: 50%;
+                  padding: 40px;
+                  border: 7px solid #fff;
+                "
               >
                 <b-icon
                   variant="success"
@@ -93,6 +95,9 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+import { mapState } from "vuex";
+
 export default {
   name: "Home",
   components: {},
@@ -118,6 +123,23 @@ export default {
       ],
     };
   },
+  methods: {
+    createSecretSanta: function() {
+      // set create journey to true.
+      this.journeyCreate(true);
+      
+      this.$bvModal.show("loginModal");
+    },
+    manageSecretSanta: function() {
+
+    },
+    ...mapActions('journeys', { journeyCreate: 'create' }),
+  },
+  computed: {
+    ...mapState({
+      createState: (state) => state.journeys.create,
+    }),
+  }
 };
 </script>
 
